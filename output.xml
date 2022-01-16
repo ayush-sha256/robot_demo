@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20220116 13:30:51.996" schemaversion="2" generator="Robot 4.1.3 (Python 2.7.16 on darwin)">
+<suite source="/Users/ayush/Desktop/tempWorkspace/robotTest/test.robot" id="s1" name="Test">
+<test id="s1-t1" name="This is test case 1">
+<kw name="Lines should be shorter than">
+<arg>${str}</arg>
+<arg>${strL}</arg>
+<kw name="Split To Lines" library="String">
+<var>${lines}</var>
+<arg>${string}</arg>
+<doc>Splits the given string to lines.</doc>
+<msg timestamp="20220116 13:30:52.011" level="INFO">4 lines returned</msg>
+<msg timestamp="20220116 13:30:52.011" level="INFO">${lines} = [u'This', u' This is line1', u' This is somehow line2', u' THis is line number3 even bigger length']</msg>
+<status status="PASS" endtime="20220116 13:30:52.011" starttime="20220116 13:30:52.011"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${long lines}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220116 13:30:52.011" level="INFO">${long lines} = 0</msg>
+<status status="PASS" endtime="20220116 13:30:52.011" starttime="20220116 13:30:52.011"/>
+</kw>
+<for flavor="IN">
+<var>${line}</var>
+<value>@{lines}</value>
+<iter>
+<var name="${line}">This</var>
+<kw name="Get Length" library="BuiltIn">
+<var>${len}</var>
+<arg>${line}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20220116 13:30:52.012" level="INFO">Length is 4</msg>
+<msg timestamp="20220116 13:30:52.012" level="INFO">${len} = 4</msg>
+<status status="PASS" endtime="20220116 13:30:52.012" starttime="20220116 13:30:52.012"/>
+</kw>
+<if>
+<branch type="IF" condition="${len}&gt;${size_threshold}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${line} has length greater than the size_threshold</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" endtime="20220116 13:30:52.012" starttime="20220116 13:30:52.012"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${long lines}</var>
+<arg>${long lines}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" endtime="20220116 13:30:52.012" starttime="20220116 13:30:52.012"/>
+</kw>
+<status status="NOT RUN" endtime="20220116 13:30:52.012" starttime="20220116 13:30:52.012"/>
+</branch>
+<status status="PASS" endtime="20220116 13:30:52.012" starttime="20220116 13:30:52.012"/>
+</if>
+<status status="PASS" endtime="20220116 13:30:52.012" starttime="20220116 13:30:52.012"/>
+</iter>
+<iter>
+<var name="${line}"> This is line1</var>
+<kw name="Get Length" library="BuiltIn">
+<var>${len}</var>
+<arg>${line}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20220116 13:30:52.012" level="INFO">Length is 14</msg>
+<msg timestamp="20220116 13:30:52.012" level="INFO">${len} = 14</msg>
+<status status="PASS" endtime="20220116 13:30:52.012" starttime="20220116 13:30:52.012"/>
+</kw>
+<if>
+<branch type="IF" condition="${len}&gt;${size_threshold}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${line} has length greater than the size_threshold</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" endtime="20220116 13:30:52.012" starttime="20220116 13:30:52.012"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${long lines}</var>
+<arg>${long lines}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" endtime="20220116 13:30:52.013" starttime="20220116 13:30:52.013"/>
+</kw>
+<status status="NOT RUN" endtime="20220116 13:30:52.013" starttime="20220116 13:30:52.012"/>
+</branch>
+<status status="PASS" endtime="20220116 13:30:52.013" starttime="20220116 13:30:52.012"/>
+</if>
+<status status="PASS" endtime="20220116 13:30:52.013" starttime="20220116 13:30:52.012"/>
+</iter>
+<iter>
+<var name="${line}"> This is somehow line2</var>
+<kw name="Get Length" library="BuiltIn">
+<var>${len}</var>
+<arg>${line}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20220116 13:30:52.013" level="INFO">Length is 22</msg>
+<msg timestamp="20220116 13:30:52.013" level="INFO">${len} = 22</msg>
+<status status="PASS" endtime="20220116 13:30:52.013" starttime="20220116 13:30:52.013"/>
+</kw>
+<if>
+<branch type="IF" condition="${len}&gt;${size_threshold}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${line} has length greater than the size_threshold</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" endtime="20220116 13:30:52.013" starttime="20220116 13:30:52.013"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${long lines}</var>
+<arg>${long lines}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" endtime="20220116 13:30:52.013" starttime="20220116 13:30:52.013"/>
+</kw>
+<status status="NOT RUN" endtime="20220116 13:30:52.013" starttime="20220116 13:30:52.013"/>
+</branch>
+<status status="PASS" endtime="20220116 13:30:52.013" starttime="20220116 13:30:52.013"/>
+</if>
+<status status="PASS" endtime="20220116 13:30:52.013" starttime="20220116 13:30:52.013"/>
+</iter>
+<iter>
+<var name="${line}"> THis is line number3 even bigger length</var>
+<kw name="Get Length" library="BuiltIn">
+<var>${len}</var>
+<arg>${line}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20220116 13:30:52.013" level="INFO">Length is 40</msg>
+<msg timestamp="20220116 13:30:52.013" level="INFO">${len} = 40</msg>
+<status status="PASS" endtime="20220116 13:30:52.013" starttime="20220116 13:30:52.013"/>
+</kw>
+<if>
+<branch type="IF" condition="${len}&gt;${size_threshold}">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${line} has length greater than the size_threshold</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" endtime="20220116 13:30:52.014" starttime="20220116 13:30:52.013"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${long lines}</var>
+<arg>${long lines}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" endtime="20220116 13:30:52.014" starttime="20220116 13:30:52.014"/>
+</kw>
+<status status="NOT RUN" endtime="20220116 13:30:52.014" starttime="20220116 13:30:52.013"/>
+</branch>
+<status status="PASS" endtime="20220116 13:30:52.014" starttime="20220116 13:30:52.013"/>
+</if>
+<status status="PASS" endtime="20220116 13:30:52.014" starttime="20220116 13:30:52.013"/>
+</iter>
+<status status="PASS" endtime="20220116 13:30:52.014" starttime="20220116 13:30:52.011"/>
+</for>
+<kw name="Convert To String" library="BuiltIn">
+<var>${final value}</var>
+<arg>${long lines}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220116 13:30:52.014" level="INFO">${final value} = 0</msg>
+<status status="PASS" endtime="20220116 13:30:52.014" starttime="20220116 13:30:52.014"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Count of Long Lines is ${final value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220116 13:30:52.014" starttime="20220116 13:30:52.014"/>
+</kw>
+<status status="PASS" endtime="20220116 13:30:52.014" starttime="20220116 13:30:52.011"/>
+</kw>
+<tag>Test1</tag>
+<status status="PASS" endtime="20220116 13:30:52.014" starttime="20220116 13:30:52.011"/>
+</test>
+<test id="s1-t2" name="This is test case 2">
+<kw name="Py Lines Should Be Shorter Than" library="pythonHelper">
+<var>${return value}</var>
+<arg>${str}</arg>
+<arg>${strL}</arg>
+<msg timestamp="20220116 13:30:52.015" level="INFO">${return value} = (0, 'this is class 1')</msg>
+<status status="PASS" endtime="20220116 13:30:52.015" starttime="20220116 13:30:52.015"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${return value string}</var>
+<arg>${return value}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220116 13:30:52.015" level="INFO">${return value string} = (0, 'this is class 1')</msg>
+<status status="PASS" endtime="20220116 13:30:52.015" starttime="20220116 13:30:52.015"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>The python file returned the value ${return value string}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220116 13:30:52.015" starttime="20220116 13:30:52.015"/>
+</kw>
+<tag>PythonFile</tag>
+<tag>Test2</tag>
+<status status="PASS" endtime="20220116 13:30:52.016" starttime="20220116 13:30:52.014"/>
+</test>
+<test id="s1-t3" name="This is test case 3">
+<kw name="Fail" library="BuiltIn">
+<arg>this was bound to fail</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20220116 13:30:52.016" level="FAIL">this was bound to fail</msg>
+<status status="FAIL" endtime="20220116 13:30:52.016" starttime="20220116 13:30:52.016"/>
+</kw>
+<tag>Test3</tag>
+<status status="FAIL" endtime="20220116 13:30:52.017" starttime="20220116 13:30:52.016">this was bound to fail</status>
+</test>
+<status status="FAIL" endtime="20220116 13:30:52.017" starttime="20220116 13:30:51.997"/>
+</suite>
+<statistics>
+<total>
+<stat fail="1" skip="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" skip="0" pass="1">PythonFile</stat>
+<stat fail="0" skip="0" pass="1">Test1</stat>
+<stat fail="0" skip="0" pass="1">Test2</stat>
+<stat fail="1" skip="0" pass="0">Test3</stat>
+</tag>
+<suite>
+<stat fail="1" skip="0" id="s1" name="Test" pass="2">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
